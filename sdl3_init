@@ -1,0 +1,44 @@
+#!/bin/bash
+
+[ ${#1} -eq 0 ] && echo "usage: $0 <path> [<prjname>]"
+
+# Create destination directory if not exists
+! [ -d $1 ] && mkdir $1
+cd $1
+
+# Set project name
+PRJNAME=$PWD
+[ ${#2} -ne 0 ] && PRJNAME=$2
+
+# Creating build directory
+mkdir build
+
+# Creating an empty C file
+touch ${PRJNAME}.c
+
+# Creating CMake configuration
+cat > CMakeLists.txt <<EOF
+cmake_minimum_required(VERSION 3.10)
+
+# Project Name
+project(${PRJNAME})
+
+# OS specific configurations
+if (APPLE)
+  set(CMAKE_MACOSX_RPATH ON)
+  set(DEST_DIR "\${CMAKE_BINARY_DIR}/macos")
+  list(APPEND CMAKE_INSTALL_RPATH "/opt/homebrew/lib")
+elseif (UNIX AND NOT APPLE)
+  set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+  set(DEST_DIR "\${CMAKE_BINARY_DIR}/unix")
+endif(
+
+# Find SDL3
+find_package(SDL3 REQUIRED)
+
+# Set destination directory and compile name
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY \${DEST_DIR})
+add_executable(${PRJNAME} ${PRJNAME}.c)
+
+target_link_libraries(${PRJNAME} PRIVATE SDL3::SDL3)
+EOF
