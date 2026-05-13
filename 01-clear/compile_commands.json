@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/matteo/Documents/git/Personal/games/sdl-examples/clear/build",
+  "command": "/usr/bin/cc  -I/opt/homebrew/include  -arch arm64 -o CMakeFiles/clear.dir/clear.c.o -c /Users/matteo/Documents/git/Personal/games/sdl-examples/clear/clear.c",
+  "file": "/Users/matteo/Documents/git/Personal/games/sdl-examples/clear/clear.c",
+  "output": "CMakeFiles/clear.dir/clear.c.o"
+}
+]

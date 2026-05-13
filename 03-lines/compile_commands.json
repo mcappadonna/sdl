@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/matteo/Documents/git/Personal/games/sdl-examples/03-lines/build",
+  "command": "/usr/bin/cc  -I/opt/homebrew/include  -arch arm64 -o CMakeFiles/lines.dir/lines.c.o -c /Users/matteo/Documents/git/Personal/games/sdl-examples/03-lines/lines.c",
+  "file": "/Users/matteo/Documents/git/Personal/games/sdl-examples/03-lines/lines.c",
+  "output": "CMakeFiles/lines.dir/lines.c.o"
+}
+]

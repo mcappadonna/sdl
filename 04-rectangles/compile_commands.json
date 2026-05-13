@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/build",
+  "command": "/usr/bin/cc  -I/opt/homebrew/include  -arch arm64 -o CMakeFiles/rectangles.dir/rectangles.c.o -c /Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/rectangles.c",
+  "file": "/Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/rectangles.c",
+  "output": "CMakeFiles/rectangles.dir/rectangles.c.o"
+}
+]

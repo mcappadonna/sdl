@@ -1,0 +1,3 @@
+/Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/build/CMakeFiles/rectangles.dir
+/Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/build/CMakeFiles/edit_cache.dir
+/Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/build/CMakeFiles/rebuild_cache.dir
