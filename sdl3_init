@@ -31,7 +31,7 @@ if (APPLE)
 elseif (UNIX AND NOT APPLE)
   set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
   set(DEST_DIR "\${CMAKE_BINARY_DIR}/unix")
-endif(
+endif()
 
 # Find SDL3
 find_package(SDL3 REQUIRED)
