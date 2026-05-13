@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/primitives.dir/primitives.c.o"
   "CMakeFiles/primitives.dir/primitives.c.o.d"
-  "primitives"
-  "primitives.pdb"
+  "unix/primitives"
+  "unix/primitives.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

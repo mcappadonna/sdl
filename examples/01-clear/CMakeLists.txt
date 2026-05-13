@@ -1,20 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Nome del progetto
-project(SDL3_Clear_Example C)
+project(clear)
 
 if (APPLE)
   set(CMAKE_MACOSX_RPATH ON)
+  set(DEST_DIR "${CMAKE_BINARY_DIR}/macos")
   list(APPEND CMAKE_INSTALL_RPATH "/opt/homebrew/lib")
-elseif (WIN32)
+elseif (UNIX AND NOT APPLE)
   set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+  set(DEST_DIR "${CMAKE_BINARY_DIR}/unix")
 endif()
 
-# 2. Cerca il pacchetto SDL3 nel sistema
 find_package(SDL3 REQUIRED)
 
-# 3. Definisci l'eseguibile (cambia 'clear' col nome che preferisci)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${DEST_DIR})
 add_executable(clear clear.c)
 
-# 4. Collega le librerie di SDL3 e include automaticamente gli header
 target_link_libraries(clear PRIVATE SDL3::SDL3)

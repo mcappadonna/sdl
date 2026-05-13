@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rectangles.dir/rectangles.c.o"
   "CMakeFiles/rectangles.dir/rectangles.c.o.d"
-  "rectangles"
-  "rectangles.pdb"
+  "unix/rectangles"
+  "unix/rectangles.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

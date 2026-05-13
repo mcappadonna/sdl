@@ -8,15 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/matteo/Documents/git/Personal/games/sdl-examples/04-rectangles/rectangles.c" "CMakeFiles/rectangles.dir/rectangles.c.o" "gcc" "CMakeFiles/rectangles.dir/rectangles.c.o.d"
+  "/home/matteo/git/sdl/examples/04-rectangles/rectangles.c" "CMakeFiles/rectangles.dir/rectangles.c.o" "gcc" "CMakeFiles/rectangles.dir/rectangles.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

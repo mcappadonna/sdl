@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lines.dir/lines.c.o"
   "CMakeFiles/lines.dir/lines.c.o.d"
-  "lines"
-  "lines.pdb"
+  "unix/lines"
+  "unix/lines.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
