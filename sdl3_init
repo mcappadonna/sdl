@@ -42,3 +42,17 @@ add_executable(${PRJNAME} ${PRJNAME}.c)
 
 target_link_libraries(${PRJNAME} PRIVATE SDL3::SDL3)
 EOF
+
+# Neovim Autocompletion on macOS
+if [ "$(uname)" == "Darwin" ]; then
+  cat > compile_commands.json <<EOF
+[
+{
+  "directory": "$(pwd)",
+  "command": "/usr/bin/cc  -I/opt/homebrew/include  -arch arm64 -o CMakeFiles/${PRJNAME}.dir/${PRJNAME}.c.o -c $(pwd)/${PRJNAME}.c",
+  "file": "$(pwd)/${PRJNAME}.c",
+  "output": "CMakeFiles/${PRJNAME}.dir/${PRJNAME}.c.o"
+}
+]
+EOF
+fi
