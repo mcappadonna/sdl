@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/matteo/Documents/git/Personal/sdl/examples/11-color-mods",
+  "command": "/usr/bin/cc  -I/opt/homebrew/include  -arch arm64 -o CMakeFiles/color-mods.dir/color-mods.c.o -c /Users/matteo/Documents/git/Personal/sdl/examples/11-color-mods/color-mods.c",
+  "file": "/Users/matteo/Documents/git/Personal/sdl/examples/11-color-mods/color-mods.c",
+  "output": "CMakeFiles/color-mods.dir/color-mods.c.o"
+}
+]
