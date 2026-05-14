@@ -1,3 +1,6 @@
+#include <SDL3/SDL_init.h>
+#include <SDL3/SDL_render.h>
+#include <wchar.h>
 #define SDL_MAIN_USE_CALLBACKS  1
 
 #include <SDL3/SDL.h>
@@ -71,11 +74,29 @@ SDL_AppResult SDL_AppIterate(void *appstate)
   SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
   SDL_RenderClear(renderer);
 
-  // kill all and red from texture
+  // kill green and red from texture
   dst_rect.x = 0.0f;
   dst_rect.y = 0.0f;
   dst_rect.w = (float)texture_width;
   dst_rect.h = (float)texture_height;
+  SDL_SetTextureColorModFloat(texture, 0.0f, 0.0f, 1.0f);
+  SDL_RenderTexture(renderer, texture, NULL, &dst_rect);
+
+  // center this one and have it cycle through different modulation
+  dst_rect.x = ((float) (WINDOW_WIDTH - texture_width)) / 2.0f;
+  dst_rect.y = ((float) (WINDOW_HEIGHT - texture_height)) / 2.0f;
+  SDL_SetTextureColorModFloat(texture, red, green, blue);
+  SDL_RenderTexture(renderer, texture, NULL, &dst_rect);
+
+  // bottom right and red
+  dst_rect.x = (float)(WINDOW_WIDTH - texture_width);
+  dst_rect.y = (float)(WINDOW_HEIGHT - texture_height);
+  SDL_SetTextureColorModFloat(texture, 1.0f, 0.0f, 0.0f);
+  SDL_RenderTexture(renderer, texture, NULL, &dst_rect);
+
+  // Present everything
+  SDL_RenderPresent(renderer);
+  return SDL_APP_CONTINUE;
 }
 
 void SDL_AppQuit(void *appstate, SDL_AppResult result)
